@@ -2,14 +2,14 @@
 
 //FC
 
-const saludo2 = {
-    name : 'eduardo',
-    edad: 23,
-}
+//const saludo2 = {
+  //  name : 'eduardo',
+  //  edad: 23,
+//}
 
 const saludo = 'Hola mundo'
 
-const PrimeraApp = () => {
+const PrimeraApp = ( { saludo = 'undefined' } ) => {
     return (
         <>
             <h1> { saludo } </h1>

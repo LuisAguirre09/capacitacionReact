@@ -6,4 +6,4 @@ import './estilos.css'
 
 const divRoot = document.querySelector('#app');
 
-ReactDOM.render( <PrimeraApp saludo='Hola ed' />, divRoot );
+ReactDOM.render( <PrimeraApp  />, divRoot );

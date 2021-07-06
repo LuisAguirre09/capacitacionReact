@@ -1,15 +1,9 @@
 //import { Fragment } from "react"; //es obligatorio los fragments si se quieren colocar divs
+import propTypes from 'prop-types';
 
-//FC
+//const saludo = 'Hola mundo'
 
-//const saludo2 = {
-  //  name : 'eduardo',
-  //  edad: 23,
-//}
-
-const saludo = 'Hola mundo'
-
-const PrimeraApp = ( { saludo = 'undefined' } ) => {
+const PrimeraApp = ( { saludo } ) => {
     return (
         <>
             <h1> { saludo } </h1>
@@ -17,6 +11,10 @@ const PrimeraApp = ( { saludo = 'undefined' } ) => {
             <p>Esto es un fragmento</p>
         </> //en lugar de fragments se ponen las etiquetas vacias
     )
+}
+
+PrimeraApp.propTypes = {
+    saludo : propTypes.string.isRequired
 }
 
 export default PrimeraApp;

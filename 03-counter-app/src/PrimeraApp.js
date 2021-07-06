@@ -2,10 +2,18 @@
 
 //FC
 
+const saludo2 = {
+    name : 'eduardo',
+    edad: 23,
+}
+
+const saludo = 'Hola mundo'
+
 const PrimeraApp = () => {
     return (
         <>
-            <h1>Hola Mundo</h1>
+            <h1> { saludo } </h1>
+            {/* JSON.stringify(saludo,null,3) */}
             <p>Esto es un fragmento</p>
         </> //en lugar de fragments se ponen las etiquetas vacias
     )

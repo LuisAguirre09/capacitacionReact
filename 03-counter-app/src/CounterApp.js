@@ -1,16 +1,19 @@
 //Functional component
+import React, {useState} from 'react';
 import propTypes from 'prop-types';
 
 const CounterApp = ( {value} ) => {
 
-    const handleAdd = (e) => {
-        console.log(e)
+    const [counter, setCounter] = useState(0); //recordemos que useState devuelve dos valores
+
+    const handleAdd = () => {
+        setCounter( counter + 1 );
     };
 
     return (
         <>
             <h1> CounterApp </h1>
-            <p> { value } </p>
+            <p> { counter } </p>
             <button onClick= { handleAdd } > +1 </button>
         </>
     )

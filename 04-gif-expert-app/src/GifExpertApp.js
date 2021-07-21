@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 function GifExpertApp() {
 
     //const categories = ['Jujutsu', 'Love is War', 'Nagatoro'];
-    const [categories, setCategories] = useState(['Jujutsu', 'Love is War', 'Nagatoro']);
+    const [categories, setCategories] = useState(['Naruto']);
 
     const handleAdd = () => {
         //setCategories( [...categories, 'Naruto'] ); //una forma es el spread operator 
@@ -22,9 +23,11 @@ function GifExpertApp() {
 
             <ol>
                 {
-                    categories.map( cat => {
-                        return <li key={ cat }> { cat } </li>
-                    })
+                    categories.map( cat => (
+                        <GifGrid 
+                        key={ cat }
+                        category={ cat }/>
+                    ))
                 }
             </ol>
 
